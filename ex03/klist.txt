@@ -1,0 +1,5 @@
+Credentials cache: API:17100
+        Principal: julekgwa@42.FR
+
+  Issued                Expires               Principal
+Mar 29 15:24:36 2016  Mar 30 01:24:35 2016  krbtgt/42.FR@42.FR
