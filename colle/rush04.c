@@ -1,45 +1,47 @@
-int	rush(int x, int y);
-int	ft_putchar(char c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rush04.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: julekgwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/04/03 10:15:16 by julekgwa          #+#    #+#             */
+/*   Updated: 2016/04/03 11:53:05 by julekgwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	rush(int x,int y)
+void	ft_putchar(char c);
+
+void	ft_display_char(int row, int col, int x, int y)
 {
-    int	k;
-    k = 0;
-    int l;
-    int r;
-    int c;
-    r = y - 1;
-    c = x -1;
-    while (k < y)
-    {
-        l = 0;
-        while (l < x)
-        {
-            if((k == 0 && l == 0) || (k == r && l == c))
-            {
-                ft_putchar('A');
-            }
-            else if ((k == r && l == 0) || (k == 0 && l == c))
-            {
-                ft_putchar('C');
-            }
-            else if(k == r || k == 0)
-            {
-                ft_putchar('B');
-            }
-            else if((k != 0 || k != r) && (l == c || l == 0))
-            {
-                ft_putchar('B');
-            }
-            else if((k != 0 && k != r) && (l != c))
-            {
-                ft_putchar(' ');
-            }
-            l++;
-        }
-        ft_putchar('\n');
-        k++;
-    }
-    return 0;
+	if((row == 1 && col == 1) || (row == y && col == x && y != 1 && x != 1))
+		ft_putchar('A');
+	else if((row == 1 && col == x) || (row == y && col == 1))
+		ft_putchar('C');
+	else if((col < x && col > 1) && (row < y && row > 1))
+		ft_putchar(' ');
+	else
+		ft_putchar('B');
 }
 
+void	rush(int x,int y)
+{
+	int	row;
+	int	col;
+
+	row = 1;
+	if(x > 0 && y > 0)
+	{
+		while(row <= y)
+		{
+			col = 1;
+			while(col <= x)
+			{
+				ft_display_char(row, col, x, y);
+				col++;
+			}
+			ft_putchar('\n');
+			row++;
+		}
+	}
+}

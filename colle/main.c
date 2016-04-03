@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvanheer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: julekgwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/06 10:54:09 by jvanheer          #+#    #+#             */
-/*   Updated: 2016/04/02 16:22:52 by julekgwa         ###   ########.fr       */
+/*   Created: 2016/04/03 10:04:03 by julekgwa          #+#    #+#             */
+/*   Updated: 2016/04/03 10:04:10 by julekgwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	rush(int x, int y);
 
-int	main( )
+int		main(void)
 {
-		rush(5, 5);
-			return(0);
+		rush(4, 4);
+		return (0);
 }
