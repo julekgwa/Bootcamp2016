@@ -3,42 +3,29 @@ int	ft_putchar(char c);
 
 int	rush(int x,int y)
 {
-    int	k;
-    k = 0;
-    int l;
-    int r;
-    int c;
-    r = y - 1;
-    c = x -1;
-    while (k < y)
+   int  row;
+   int  col;
+
+   row = 1;
+    while (row <= y)
 	{
-        l = 0;
-        while (l < x)
+        col = 1;
+        while (col <= x)
         {
-            if(((k == 0 && l == 0)) || (k == 0 && l == c))
-            {
+            if(((row == 1 && col == 1)) || (row == 1 && col == x))
                 ft_putchar('A');
-            }
-			else if ((k == r && l == 0) || (l == c && k == r))
-            {
+			else if ((row == y && col == 0) || (col == x && row == y))
                 ft_putchar('C');
-            }
-			else if(((k == (y -1)) || (k == 0)))
-            {
+			else if(((row == (y -1)) || (row == 0)))
                 ft_putchar('B');
-            }
-			else if((k != 0 || k != r) && (l == 0 || l == c))
-            {
+			else if((row != 0 || row != y) && (col == 0 || col == x))
                 ft_putchar('B');
-            }
-			else if((k != 0 && k != (y -1)) && (l != (x - 1)))
-            {
+			else if((row != 0 && row != (y -1)) && (col != (x - 1)))
                 ft_putchar(' ');
-            }
-            l++;
+            col++;
         }
         ft_putchar('\n');
-        k++;
+        row++;
     }
     return 0;
 }
