@@ -1,4 +1,14 @@
-#include	<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: julekgwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/04/04 12:47:10 by julekgwa          #+#    #+#             */
+/*   Updated: 2016/04/04 14:13:11 by julekgwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strrev(char *str)
 {
@@ -25,13 +35,4 @@ char	*ft_strrev(char *str)
 		len--;
 	}
 	return (str);
-}
-
-int main(void)
-{
-	char ts[] = "hello world";
-	char *p;
-	p = ts;
-	printf("%s", ft_strrev(p));
-	return (0);
 }

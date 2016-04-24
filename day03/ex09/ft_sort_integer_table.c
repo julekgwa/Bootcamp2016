@@ -1,4 +1,14 @@
-#include	<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_integer_table.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: julekgwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/04/04 12:47:38 by julekgwa          #+#    #+#             */
+/*   Updated: 2016/04/04 15:19:03 by julekgwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	ft_sort_integer_table(int *tab, int size)
 {
@@ -12,28 +22,17 @@ void	ft_sort_integer_table(int *tab, int size)
 		t = 0;
 		while(t < size)
 		{
-			if(tab[t] > tab[t + 1])
+			if((t + 1) < size)
 			{
-				temp = tab[t];
-				tab[t] = tab[t + 1];
-				tab[t + 1] = temp;
+				if(tab[t] > tab[t + 1])
+				{
+					temp = tab[t];
+					tab[t] = tab[t + 1];
+					tab[t + 1] = temp;
+				}
 			}
 			t++;
 		}
 		i++;
 	}
-}
-
-int main()
-{
-	int num[] = {5,3,1,9,2,0};
-	ft_sort_integer_table(num, 6);
-
-	int i = 0;
-	while( i < 6)
-	{
-		printf("%d ", num[i]);
-		i++;
-	}
-	return 0;
 }

@@ -1,18 +1,24 @@
-#include	<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: julekgwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/04/05 16:46:43 by julekgwa          #+#    #+#             */
+/*   Updated: 2016/04/05 16:47:15 by julekgwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
-	int prime;
+	int	prime;
 
 	prime = nb / 2;
-	if(prime == 1 || (prime * 2) != nb)
+	if ( nb <= 1)
+		return (0);
+	else if (nb == 2 || (prime * 2) != nb)
 		return (1);
 	else
 		return (0);
-}
-
-int main()
-{
-	printf("%d", ft_is_prime(1));
-	return 0;
 }

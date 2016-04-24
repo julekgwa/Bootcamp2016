@@ -1,4 +1,14 @@
-#include	<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: julekgwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/04/04 12:44:33 by julekgwa          #+#    #+#             */
+/*   Updated: 2016/04/04 13:44:23 by julekgwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
@@ -7,15 +17,4 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	temp = *a;
 	*a /= *b;
 	*b = temp % *b;
-}
-
-int	main(void)
-{
-	int a = 20, b =10;
-	int *p,*s;
-	p = &a;
-	s = &b;
-	ft_ultimate_div_mod(p,s);
-	printf("%d %d", a,b);
-	return (0);
 }
